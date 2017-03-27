@@ -15,17 +15,12 @@ public class Massives {
         int[][] massive2d = new int[5][5];
         int value = 0;
         for (int i = 0; i <= 4; i++) {
-//                System.out.print(massive2d[i][stroka]);
                 for (int j = 0; j <= 4; j++){
-//                stroka++;
-//                System.out.println();
                     massive2d[i][j]=value;
                     value++;
                     System.out.print(massive2d[i][j] + " ");
             }
             System.out.println();
         }
-//        String massiveStr = Arrays.toString(massive2d);
-//        System.out.print(massiveStr);
     }
 }

@@ -32,6 +32,10 @@ public class Math {
             case 5:
                 break;
         }
-        return c;
+        if (operation == 0){
+            System.out.println("До свидания!");
+            return c;
+        }
+        else return c;
     }
 }

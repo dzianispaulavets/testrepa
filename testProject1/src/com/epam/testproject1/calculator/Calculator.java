@@ -13,11 +13,10 @@ public class Calculator {
 
     public static void main(String[] args) {
         int x = 0;
-        int a=0;
-        int b=0;
+        int a = 0;
+        int b = 0;
 
         System.out.println("Hello!");
-        System.out.println("Please enter desired operation:");
         System.out.println("1 - perform sum of a and b");
         System.out.println("2 - perform subtraction of a and b");
         System.out.println("3 - perform multiplication of a and b");
@@ -26,19 +25,23 @@ public class Calculator {
 
         Scanner in = new Scanner(System.in);
         x = in.nextInt();
-
-        System.out.println(x);
         Math calculate = new Math(x);
 
-        System.out.println("Enter a: ");
-        a = in.nextInt();
+            if (x != 0) {
+                System.out.println("Enter a: ");
+                a = in.nextInt();
 
-        System.out.println("Enter b: ");
-        b = in.nextInt();
+                System.out.println("Enter b: ");
+                b = in.nextInt();
 
-        int resultat;
-        resultat = calculate.calculation(a, b);
+                int resultat;
+                resultat = calculate.calculation(a, b);
 
-        System.out.println("Результат вашей операции = " + resultat);
+                System.out.println("Результат вашей операции = " + resultat);
+
+            } else System.out.println("До свидания!");
+            while (x != 0){
+                x = in.nextInt();
+            }
     }
 }

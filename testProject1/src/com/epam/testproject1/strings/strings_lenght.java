@@ -1,11 +1,11 @@
-package com.epam.testproject1;
+package com.epam.testproject1.strings;
 
 import java.util.Scanner;
 
 /**
  * Created by dzianis_paulavets on 3/28/17.
  *
- * doesn't work
+ * Ввести n строк с консоли, найти самую короткую и самую длинную строки. Вывести найденные строки и их длину.
  *
  *
  */
@@ -47,7 +47,7 @@ public class strings_lenght {
             System.out.println(razmer);
 
             for(int i = 0; i < mass.length; i++){
-                
+
             }
         }
 

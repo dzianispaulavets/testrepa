@@ -1,4 +1,4 @@
-package com.epam.testproject1;
+package com.epam.testproject1.massives;
 
 
 import java.lang.reflect.Array;

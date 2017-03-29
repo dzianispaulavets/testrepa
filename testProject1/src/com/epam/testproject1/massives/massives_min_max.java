@@ -1,4 +1,4 @@
-package com.epam.testproject1;
+package com.epam.testproject1.massives;
 
 import java.util.Arrays;
 import java.util.Random;

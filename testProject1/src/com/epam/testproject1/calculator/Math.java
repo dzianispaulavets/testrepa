@@ -15,7 +15,7 @@ public class Math {
         switch (operation){
             case 1:
                 c = a + b;
-                break;
+                return c;
 
             case 2:
                 c = a - b;

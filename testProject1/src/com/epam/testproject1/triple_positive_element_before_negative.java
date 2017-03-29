@@ -4,6 +4,10 @@ import java.util.Random;
 
 /**
  * Created by dzianis_paulavets on 3/28/17.
+ *
+ * В массиве целых чисел утроить каждый положительный элемент, который стоит перед отрицательным.
+ *
+ *
  */
 public class triple_positive_element_before_negative {
 

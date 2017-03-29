@@ -4,6 +4,9 @@ import java.util.Random;
 
 /**
  * Created by dzianis_paulavets on 3/27/17.
+ *
+ * - В массиве целых чисел поменять местами максимальный отрицательный элемент  и минимальный положительный.
+ *
  */
 public class min_positive_max_positive {
     public static void main(String[] args) {

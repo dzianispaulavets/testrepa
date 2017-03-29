@@ -4,6 +4,9 @@ import java.util.Random;
 
 /**
  * Created by dzianis_paulavets on 3/27/17.
+ *
+ * - В массиве целых чисел определить сумму элементов, состоящих на чётных позициях.
+ *
  */
 public class sum_of_elements_on_each_2nd_position {
     public static void main(String[] args) {

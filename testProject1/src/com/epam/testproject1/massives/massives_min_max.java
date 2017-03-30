@@ -5,6 +5,9 @@ import java.util.Random;
 
 /**
  * Created by dzianis_paulavets on 3/27/17.
+ *
+ * поиск минимального и максимального
+ *
  */
 public class massives_min_max {
     public static void main(String[] args) {

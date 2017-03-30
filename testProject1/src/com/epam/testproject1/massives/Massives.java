@@ -6,6 +6,9 @@ import java.util.Arrays;
 
 /**
  * Created by dzianis_paulavets on 3/23/17.
+ *
+ * создание двумерного массива
+ *
  */
 
 public class Massives {

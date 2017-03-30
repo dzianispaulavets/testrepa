@@ -11,45 +11,46 @@ import java.util.Scanner;
  */
 public class strings_lenght {
     public static void main(String[] args) {
-//        Scanner scn = new Scanner(System.in);
-//        System.out.println("Enter # of desired lines: ");
-//        int skolko_strok = scn.nextInt();
-//
-//        String[] stroki = new String[skolko_strok];
-//
-//        for (int i = 0; i < stroki.length; i++){
-//
-//        }
-//        if (stroki.length < skolko_strok){
-//            System.out.println("Please enter more lines");
-//        }
-
-
-
-
         System.out.println("Hello!");
-        System.out.println("Type sentences separating by new lines.");
-        System.out.println("Type exit to finish");
+        System.out.println("Type sentences separating by new lines (pressing Enter)");
+        System.out.println("Type Result to show minimal and maximal lines with their length");
+        System.out.println("Type Exit to finish");
 
         String x = "";
 
-        int razmer = 1;
+        String minimal = " ";
+        String maximal = " ";
 
+        Scanner scn = new Scanner(System.in);
+        x = scn.nextLine();
+        minimal=x;
 
-        while (x != "exit"){
+        while (!x.equals("Exit") && !x.equals("Result")){
 
-            String[] mass = new String[razmer];
-            String[] massX = new String[razmer];
-            Scanner scn = new Scanner(System.in);
+            if (!x.equals("Exit") && !x.equals("Result")){
+                System.out.println("Entered " + x.length() + " symbols");
+            }
+            if(x.length() < minimal.length()){
+                minimal = x;
+            }
+            if(x.length() > maximal.length()){
+                maximal = x;
+            }
             x = scn.nextLine();
-            System.out.println(x);
-            razmer++;
-            System.out.println(razmer);
-
-            for(int i = 0; i < mass.length; i++){
-
+        }
+        System.out.println();
+        if (x.equals("Result")){
+            if(!minimal.equals("Result")) {
+                System.out.println("minimal string = " + minimal + ". Number of symbols in the string = " + minimal.length());
+            }
+            if(!maximal.equals("Result")) {
+                System.out.println("maximal string = " + maximal + ". Number of symbols in the string = " + maximal.length());
+            }
+            else{
+                System.out.println("String was not entered");
             }
         }
+        System.out.println("Bye!");
 
 
 

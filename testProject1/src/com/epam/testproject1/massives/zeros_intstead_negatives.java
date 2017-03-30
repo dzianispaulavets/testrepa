@@ -4,6 +4,9 @@ import java.util.Random;
 
 /**
  * Created by dzianis_paulavets on 3/28/17.
+ *
+ * Нули вместо отрицательных
+ *
  */
 public class zeros_intstead_negatives {
 

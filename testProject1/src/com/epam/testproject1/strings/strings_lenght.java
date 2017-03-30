@@ -51,9 +51,5 @@ public class strings_lenght {
             }
         }
         System.out.println("Bye!");
-
-
-
-
     }
 }

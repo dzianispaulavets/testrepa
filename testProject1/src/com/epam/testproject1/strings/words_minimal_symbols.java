@@ -49,9 +49,17 @@ public class words_minimal_symbols {
         * Here will be the code which finds words with most different symbols inside
         *
         * */
+        ArrayList<String> str = new ArrayList<String>(0);
+        ArrayList<Integer> pos = new ArrayList<Integer>(0);
+        ArrayList<Integer> symbols = new ArrayList<Integer>(0);
+        String melement;
+        for (int i =0; i< massiv.size(); i++){
+            melement = massiv.get(i);
+            for (int j = 0; j < melement.length(); j++){
+                for (int f = melement.length()-1; f > j && ; f--){
 
-        for (int i = 0; i < massiv.size(); i++){
-
+                }
+            }
         }
 
     }

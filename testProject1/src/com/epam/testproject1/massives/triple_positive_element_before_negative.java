@@ -15,7 +15,6 @@ public class triple_positive_element_before_negative {
 
         //initialize massiv
         int[] massiv = new int[20];
-        int[] resultmassiv = new int[20];
 
         Random rnd = new Random();
 
@@ -24,12 +23,6 @@ public class triple_positive_element_before_negative {
             massiv[i] = (rnd.nextInt(20)-10);
             System.out.print(massiv[i] + " ");
         }
-
-        //duplicate massiv
-        for (int i = 0; i < massiv.length; i++){
-            resultmassiv[i] = massiv[i];
-        }
-
         System.out.println();
 
         // triple positive elements located before negatives

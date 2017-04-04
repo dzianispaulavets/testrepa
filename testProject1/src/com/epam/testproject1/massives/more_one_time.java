@@ -33,8 +33,6 @@ public class more_one_time {
         System.out.println();
 
         //считаем сколько элементов повторяются и выводим все повторки на нечетных местах
-//        int flag = 0;
-//        int counter = 1;
         for (int i = 0; i < msize; i++){
             for(int j = msize-1; j >= 0; j--){
                 if(massiv[i] == massiv [j] && i != j && j > i){

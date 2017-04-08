@@ -2,13 +2,9 @@ package com.epam.testproject1.strings;
 
 import com.sun.deploy.util.StringUtils;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 /**
- *
- * Doesn't work! correctly...
- *
  * Ввести n слов с консоли. Найти слово, в котором число различных символов минимально. Если таких слов несколько, найти первое из них.
  */
 public class words_minimal_symbols {
@@ -45,55 +41,19 @@ public class words_minimal_symbols {
                 index = 0;
             }
         }
-        System.out.println("Words separated in massive: " + massiv);
+//        System.out.println("Words separated in massive: " + massiv);
         System.out.println("# of words entered = " + massiv.size());
 
         /*
-        *
         * Here will be the code which finds words with most different symbols inside
-        *
         * */
-        ArrayList<Integer> msymbols = new ArrayList<Integer>(0);
-        String melement = "";
-        int flag = 0;
-        //проверка каждого слова
-        //Variant I
-        for (int i =0; i< massiv.size(); i++){
-            melement = massiv.get(i);
-            //начинаем проверку каждой буквы
-            for (int j = 0; j < melement.length(); j++){
-                for (int f = melement.length()-1; f >= 0; f--){
-                    if (melement.charAt(j) == melement.charAt(f) && f != j && f > j){
-                        flag++;
-                    }
-                }
-            }
+        ArrayList<Float> msymbols = new ArrayList<Float>(0);
+        String melement;
 
-            //проверяем, если количество букв равно количеству символов, т.е. слово содержит только 1 симфол
-            // несоклько раз например, то меняем флаг на 1
-            if (melement.length() == flag){
-                msymbols.add(1);
-            }
-            else msymbols.add(melement.length()-flag);
-            flag=0;
-        }
-        System.out.println("# of different symbols in each word: " + msymbols);
-
-
-
-        // Variant II
-//        for (int i = 0; i < massiv.size(); i++){
-//            int dlina = massiv_size - flag;
-//            for (int j = dlina; j > 0; j--){
-//                if()
-//            }
 //
-//        }
-
-
+//            //проверяем, если количество букв равно количеству символов, т.е. слово содержит только 1 симфол
         /*
-        *
-        * Here will be the code which calculate/finds words where # of different symbols is minimum.
+        * Below is the code which calculate/finds words where # of different symbols is minimum.
         * The formula is the following: (# of symbols in a word / # of differend symbols in the word)
         * We have:
         *  massiv - massive for words entered
@@ -103,19 +63,46 @@ public class words_minimal_symbols {
         *       1. get word from massiv
         *       2. devide #of letters by #of different letters
         *       3. The highest number wins
-        *
-        *
         * */
 
-        ArrayList<Float> result_massiv = new ArrayList<Float>(massiv.size());
-        float resultat;
-        for (int i = 0; i < massiv.size(); i++){
-            resultat = ((msymbols.get(i))/(massiv.get(i).length()));
-            result_massiv.add(resultat);
+        Map<Character,Integer> map = new HashMap<>();
+        for (int i = 0; i < massiv.size(); i++) {
+            melement = massiv.get(i);
+            msymbols.ensureCapacity(+1);
+            for (int j = 0; j < melement.length(); j++) {
+                if (!map.containsKey(melement.charAt(j))) {
+                    map.put(melement.charAt(j), +1);
+                } else {
+                    int temp = map.get(melement.charAt(j));
+                    temp += 1;
+                    map.replace(melement.charAt(j), temp);
+                }
+            }
+            msymbols.add((float)melement.length()/map.size());
+//            System.out.println(map);
+//            System.out.println("количество разных символов = " + map.size());
+//            System.out.println(melement.length());
+//            System.out.println();
+            map.clear();
         }
+//        System.out.println(msymbols);
 
-        System.out.println("<===================>");
-        System.out.println(result_massiv);
 
+        /*
+        Here is the code which finds higher value
+         */
+
+        float higher_value = msymbols.get(0);
+        String slovo = "";
+
+        for (int i = 0; i < msymbols.size(); i++){
+            if (higher_value < msymbols.get(i)){
+                higher_value = msymbols.get(i);
+                slovo = massiv.get(i);
+            }
+        }
+        System.out.println();
+//        System.out.println("самое большое значение = " + higher_value);
+        System.out.println("Word with minimal number of different letters = " + slovo);
     }
 }
